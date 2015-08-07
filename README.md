@@ -1,32 +1,22 @@
 # review-delays
 
-FIXME: description
+A crappy little script I threw together to check for gender bias in
+time-to-first-comment on GitHub pull requests.
 
 ## Installation
 
-Download from http://example.com/FIXME.
+Install [leiningen](http://leiningen.org). Then, you can compile the jar via:
+
+    $ lein uberjar
 
 ## Usage
 
-FIXME: explanation
+The first thing you probably want to do is open up
+`src/review\_delays/core.clj` and modify `munge-data` to accurately tag your
+data. You may need to modify `graph-dataset` as well to play with data
+representations and other stuff.
 
-    $ java -jar review-delays-0.1.0-standalone.jar [args]
-
-## Options
-
-FIXME: listing of options this app accepts.
-
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
+    $ lein run -- -u GITHUB_USERNAME -t GITHUB_API_TOKEN ORGANIZATION_NAME
 
 ## License
 
